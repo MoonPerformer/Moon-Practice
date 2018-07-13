@@ -6,6 +6,9 @@
 .mt_150 {
     margin-top: 150px;
 }
+.mb_20 {
+    margin-bottom: 20px;
+}
 .panel h4 {
     text-align: center;
 }
@@ -122,4 +125,11 @@ body.active {
 .lt_main .breadcrumb  li>a {
     color: #337ab7;
     display: inline-block;
+}
+
+
+/* 表格 */
+th, td {
+    text-align: center;
+    vertical-align: middle;
 }
