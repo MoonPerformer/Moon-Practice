@@ -1,0 +1,125 @@
+
+/* 登录页面css */
+.login_bg {
+    background-color: #222d32;
+}
+.mt_150 {
+    margin-top: 150px;
+}
+.panel h4 {
+    text-align: center;
+}
+
+/* index页面css */
+
+/* 初始化 */
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+a:link,a:visited,a:hover,a:active {
+    text-decoration: none;
+    color: #fff; 
+}
+
+
+img {
+    display: block;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    padding-left: 180px;
+    transition: all 1s;
+}
+body.active {
+    padding-left: 0;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.lt_aside {
+    height: 100%;
+    width: 180px;
+    background-color: #222d32;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1s; 
+}
+.lt_aside.active {
+    left: -180px;
+}
+.lt_aside .brand a {
+    width: 100%;
+    height: 50px;
+    background-color: #367fa9;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+}
+.lt_aside .user img {
+    margin: 30px 50px 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.lt_aside .user p {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    font-family: 楷体;
+    color: skyblue;
+}
+.lt_aside .nav a {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    color: #ccc;
+    border: 3px solid transparent;
+}
+.nav a.active {
+    border-left-color: #069;
+    background-color: #1d1f21;
+    color: #fff;
+} 
+.lt_aside .nav .child a {
+    padding-left: 50px;
+}
+
+.lt_main {
+    width: 100%;
+    height: 100%;
+}
+.lt_main .topBar {
+    background-color: #3c8dbc;
+    height: 50px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.lt_main .topBar a {
+    font-size: 16px;
+    line-height: 50px;
+}
+.lt_main .breadcrumb  li>a {
+    color: #337ab7;
+    display: inline-block;
+}
