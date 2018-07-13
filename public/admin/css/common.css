@@ -129,7 +129,8 @@ body.active {
 
 
 /* 表格 */
-th, td {
-    text-align: center;
-    vertical-align: middle;
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
 }
