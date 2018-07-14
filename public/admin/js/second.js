@@ -12,7 +12,7 @@ $(function () {
                 pageSize: pageSize
             },
             success: function (info) {
-                console.log(info);
+                // console.log(info);
                 $("tbody").html(template("tpl", info));
                 //分页的功能
                 $("#paginator").bootstrapPaginator({
@@ -39,7 +39,7 @@ $(function () {
             type: 'get',
             url: '/category/queryTopCategoryPaging',
             data: {
-                page: page,
+                page: 1,
                 pageSize: 100
             },
             success: function (info) {

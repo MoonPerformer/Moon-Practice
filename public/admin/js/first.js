@@ -12,7 +12,7 @@ $(function () {
                 pageSize: pageSize
             },
             success: function (info) {
-                console.log(info);
+                // console.log(info);
                 $("tbody").html(template("tpl", info));
                 //分页的功能
                 $("#paginator").bootstrapPaginator({

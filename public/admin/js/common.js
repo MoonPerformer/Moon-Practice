@@ -2,7 +2,7 @@ $(function () {
     
     document.onreadystatechange = function(){
         NProgress.start();
-        console.log(document.readyState);
+        // console.log(document.readyState);
         if(document.readyState == "Uninitialized"){
           NProgress.set(1);
         }
@@ -27,6 +27,7 @@ $(function () {
     $(".aside_hide").click(function () {
         $(".lt_aside").toggleClass("active");
         $("body").toggleClass("active");
+        $(".topBar").toggleClass("active");
     });
 
     // 二级菜单
