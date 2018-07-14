@@ -2,6 +2,7 @@ $(function () {
     // 获取数据并渲染到页面
     var page = 1;
     var pageSize = 5;
+
     function render() {
         $.ajax({
             type: 'get',
@@ -33,14 +34,18 @@ $(function () {
 
 
     // 点击按钮改变状态
+    var id;
+    var isDelete;
     $("tbody").on("click", "button", function () {
-        var id = $(this).parent().data("id");
-        var isDelete;
+        id = $(this).parent().data("id");
         if ($(this).hasClass("btn-success")) {
             isDelete = 1;
         } else {
             isDelete = 0;
         }
+        $("#userModal").modal('show');
+    });
+    $(".btn_confirm").on("click", function () {
         $.ajax({
             type: 'post',
             url: '/user/updateUser',
@@ -49,7 +54,7 @@ $(function () {
                 isDelete: isDelete
             },
             success: function (info) {
-                // console.log(info);
+                $("#userModal").modal('hide');
                 render();
             }
         });
