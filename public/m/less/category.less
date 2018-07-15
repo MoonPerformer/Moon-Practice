@@ -4,7 +4,14 @@
         float: left;
         height: 100%;
         position: relative;
-        li {
+        li.active {
+            a {
+                border: none;
+                background-color: silver;
+            }
+        }
+        a {
+            display: block;
             width: 90px;
             height: 50px;
             line-height: 50px;
@@ -12,10 +19,6 @@
             background-color: skyblue;
             border-right: 1px solid #ccc;
             border-bottom: 1px solid #ccc;
-            &.active {
-                border: none;
-                background-color: #fff;
-            }
         }
     }
     .category_r {
@@ -26,6 +29,11 @@
             float: left;
             width: 33.33%;
             text-align: center;
+            img {
+                width: 62px;
+                height: 62px;
+                margin: 0 auto;
+            }
         }
     }
 }

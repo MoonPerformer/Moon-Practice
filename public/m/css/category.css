@@ -4,7 +4,12 @@
   height: 100%;
   position: relative;
 }
-.lt_main .category_l li {
+.lt_main .category_l li.active a {
+  border: none;
+  background-color: silver;
+}
+.lt_main .category_l a {
+  display: block;
   width: 90px;
   height: 50px;
   line-height: 50px;
@@ -12,10 +17,6 @@
   background-color: skyblue;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-}
-.lt_main .category_l li.active {
-  border: none;
-  background-color: #fff;
 }
 .lt_main .category_r {
   overflow: hidden;
@@ -26,4 +27,9 @@
   float: left;
   width: 33.33%;
   text-align: center;
+}
+.lt_main .category_r li img {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto;
 }
