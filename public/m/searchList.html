@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>乐淘--分类页</title>
+    <title>乐淘--商品列表</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/category.css">
+    <link rel="stylesheet" href="./css/searchList.css">
 </head>
 
 <body>
@@ -20,30 +20,36 @@
             <a href="javascript:history.go(-1);" class="icon_left">
                 <span class="mui-icon mui-icon-back"></span>
             </a>
-            <h4>乐淘分类</h4>
-            <a href="search.html" class="icon_right">
-                <span class="fa fa-search"></span>
-            </a>
+            <h4>商品列表</h4>
         </div>
         <!-- 主体 -->
         <div class="lt_main">
-            <!-- 左侧 -->
-            <div class="category_l">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <ul class="catel_ul">
-                            <!-- 挖个坑 -->
-                        </ul>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="lt_search">
+                        <input type="text" placeholder="请输入搜索关键字">
+                        <button class="mui-btn mui-btn-primary btn_search">搜索</button>
                     </div>
-                </div>
-            </div>
-            <!-- 右侧 -->
-            <div class="category_r">
-                <div class="mui-scroll-wrapper">
-                    <div class="mui-scroll">
-                        <ul class="mui-clearfix cater_ul">
-                            <!-- 挖个坑 -->
-                        </ul>
+                    <div class="lt_sort mui-clearfix">
+                        <a href="javascrpt:;" class="">
+                            上架时间
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <a href="javascrpt:;" class="" data-type="price">
+                            价格
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <a href="javascrpt:;" class="" data-type="num">
+                            库存
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <a href="javascrpt:;" class="">
+                            折扣
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                    </div>
+                    <div class="lt_product mui-clearfix">
+                        <!-- 挖个坑 -->
                     </div>
                 </div>
             </div>
@@ -57,7 +63,7 @@
                         <p>首页</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="category.html" class="">
                         <span class="fa fa-bars"></span>
                         <p>分类</p>
@@ -79,33 +85,28 @@
         </div>
     </div>
 
-    <!-- 模板一 -->
-    <script type="text/html" id="tpl1">
-        {{each rows v i}}
-        <li data-id="{{v.id}}" class="{{i === 0 ? "active" : ''}}">
-            <a href="javascrpt:;" class="">{{v.categoryName}}</a>
-        </li>
-        {{ /each }}
-    </script>
-    <!-- 模板二 -->
-    <script type="text/html" id="tpl2">
-        {{if rows.length === 0}}
-        <p>该分类下没有更多的品牌信息</p>
+    <!-- 模板 -->
+    <script type="text/html" id="tpl">
+        {{ if data.length === 0}}
+        <p>没有更多的商品信息</p>
         {{ /if }}
-        {{each rows v i}}
-        <li>
-            <a href="javascrpt:;" class="">
-                <img src="{{v.brandLogo}}" alt="">
-                <p>{{v.brandName}}</p>
-            </a>
-        </li>
+        {{each data v i}}
+        <div class="product_item">
+            <img src="{{v.pic[0].picAddr}}" alt="">
+            <p class="mui-ellipsis-2">{{v.proName}}</p>
+            <p>
+                <span class="price">￥{{v.price}}</span>
+                <del class="oldPrice">￥{{v.oldPrice}}</del>
+            </p>
+            <button class="mui-btn mui-btn-primary">立即购买</button>
+        </div>
         {{ /each }}
     </script>
     <script src="./lib/mui/js/mui.min.js"></script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./lib/zepto/zepto.min.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/category.js"></script>
+    <script src="./js/searchList.js"></script>
 </body>
 
 </html>

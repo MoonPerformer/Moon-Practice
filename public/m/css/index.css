@@ -5,20 +5,3 @@
   float: left;
   width: 33.33%;
 }
-.lt_main .lt_product {
-  padding: 10px;
-}
-.lt_main .lt_product .product_item {
-  padding: 10px;
-  float: left;
-  width: 48%;
-  text-align: center;
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-.lt_main .lt_product .product_item:nth-of-type(even) {
-  margin-left: 4%;
-}
-.lt_main .lt_product .product_item .price {
-  color: red;
-}
